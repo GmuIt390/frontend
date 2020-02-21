@@ -1,0 +1,4 @@
+TODO
+3.25 Create and Get Notifications
+3.58 Finishing up Cloud Functions
+4:44 Post Card Details: cardmedia error

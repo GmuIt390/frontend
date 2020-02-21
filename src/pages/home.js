@@ -25,7 +25,7 @@ class home extends Component {
         //checks if posts exist and loaded
         let recentPostMarkup = this.state.posts ? (
             //renders all post from Post component
-            this.state.posts.map((post) => <Post post={post}/>)
+            this.state.posts.map((post) => <Post key={post.postId} post={post}/>)
         ) : <p>Loading...</p>
         return (
             //Create grid structure for posts

@@ -1,0 +1,77 @@
+import React, { Component } from 'react';
+import withStyles from '@material-ui/core/styles/withStyles';
+import { Link } from 'react-router-dom';
+//npm install --save dayjs
+import dayjs from 'dayjs';
+import relatativeTime from 'dayjs/plugin/relativeTime';
+
+//Material ui cards
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import Typorgraphy from '@material-ui/core/Typography';
+
+const styles = {
+    card: {
+        display: 'flex',
+        marginBottom: 20
+    },
+    image: {
+        minWidth: 200
+    },
+    content: {
+        padding: 25,
+        objectFit: 'cover'
+    }
+}
+
+class Post extends Component {
+    render() {
+        dayjs.extend(relatativeTime);
+        //extract fields from post
+        const { classes,
+            post:{
+                body,
+                createdAt,
+                userImage,
+                userHandle,
+                postId,
+                likeCount,
+                commentCount
+            } } = this.props;
+        return (
+            //card rendering
+            <Card className={classes.card}>
+                <CardMedia
+                    image={userImage}
+                    title="Profile image"
+                    className={classes.image}/>
+                <CardContent className={classes.content}>
+                    <Typorgraphy
+                        variant="h5"
+                        component={Link}
+                        to={`/users/${userHandle}`}
+                        color="primary">
+                        {userHandle}
+                    </Typorgraphy>
+                    {/*createdAt no nanoseconds?*/}
+                    <Typography
+                        variant="body2"
+                        color="textSecondary">
+                            {dayjs(createdAt).fromNow()}
+                    </Typography>
+                    {/**/}
+                    <Typography
+                        variant="body1">
+                        {body}
+                    </Typography>
+                </CardContent>
+            </Card>
+        );
+    }
+}
+
+export default withStyles(styles)(Post);
