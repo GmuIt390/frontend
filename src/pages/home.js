@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
+import Grid from '@material-ui/core/Grid';
 
 class home extends Component {
+    //get posts
+    //npm install --save axios
+    componentDidMount() {
+
+    }
     render() {
         return (
+            //Create grid structure for posts
             <div>
-                <h1>Home Page</h1>
+                <Grid container spacing={16}>
+                    <Grid item sm={8} xs={12}>
+                        <p>Content...</p>
+                    </Grid>
+                    <Grid item sm={4} xs={12}>
+                        <p>Profile...</p>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
