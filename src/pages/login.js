@@ -71,6 +71,7 @@ class login extends Component {
         axios.post('/login',userData)
             .then((result) => {
                 console.log(result.data);
+                localStorage.setItem('FBIdToken', `Bearer ${result.data.token}`);
                 this.setState({
                     loading: false
                 });
@@ -85,7 +86,7 @@ class login extends Component {
             });
     }
     //targets form field and allows change of target value
-    handleChange= (event) => {
+    handleChange = (event) => {
         this.setState({
            [event.target.name]: event.target.value
         })
@@ -120,7 +121,7 @@ class login extends Component {
                         <TextField id="password"
                             name="password"
                             type="password"
-                            label="password"
+                            label="Password"
                             className={classes.textField}
                             //display null password error
                             helperText={errors.password}
@@ -146,7 +147,7 @@ class login extends Component {
                                 )}
                         </Button>
                         <br/>
-                        <small>don't have an account? sign up <Link to="/signup">here</Link></small>
+                        <small>Don't have an account? Sign up <Link to="/signup">here</Link></small>
                     </form>
                 </Grid>
                 <Grid item sm/>
