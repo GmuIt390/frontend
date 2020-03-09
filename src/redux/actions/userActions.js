@@ -1,4 +1,11 @@
-import { SET_USER,SET_ERRORS,LOADING_UI,CLEAR_ERRORS, SET_UNAUTHENTICATED } from '../types';
+import { 
+    SET_USER,
+    SET_ERRORS,
+    LOADING_UI,
+    CLEAR_ERRORS,
+    SET_UNAUTHENTICATED,
+    LOADING_USER
+} from '../types';
 import axios from 'axios';
 
 //login function
@@ -31,6 +38,7 @@ export const logoutUser = () => (dispatch) => {
 
 //get user data function when logged in
 export const getUserData = () => (dispatch) => {
+    dispatch({ type: LOADING_USER });
     axios.get('/user')
     .then((result) => {
         dispatch({
@@ -61,6 +69,16 @@ export const signupUser = (newUserData,history) => (dispatch) => {
             payload: err.response.data
         })
     });
+}
+
+//upload image to db
+export const uploadImage = (formData) => (dispatch) => {
+    dispatch({ type: LOADING_USER })
+    axios.post('/user/image', formData)
+    .then((result) => {
+        dispatch(getUserData());
+    })
+    .catch((err) => console.log(err));
 }
 
 const setAuthorizationHeader = (token) => {

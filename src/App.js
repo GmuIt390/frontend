@@ -2,17 +2,17 @@
 //create-react-app prod-exercise
 //npm install --save react-router-dom
 //npm install --save @material-ui/core
-//npm install --save jwt-decode
-//npm install --save redux react-redux redux-thunk
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import themeFile from './util/theme';
+//npm install --save jwt-decode
 import jwtDecode from 'jwt-decode';
 import axios from 'axios';
 
+//npm install --save redux react-redux redux-thunk
 //redux
 import { Provider } from 'react-redux';
 import store from './redux/store';
