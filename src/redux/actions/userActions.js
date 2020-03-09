@@ -71,7 +71,7 @@ export const signupUser = (newUserData,history) => (dispatch) => {
     });
 }
 
-//upload image to db
+//upload image function
 export const uploadImage = (formData) => (dispatch) => {
     dispatch({ type: LOADING_USER })
     axios.post('/user/image', formData)
@@ -81,9 +81,19 @@ export const uploadImage = (formData) => (dispatch) => {
     .catch((err) => console.log(err));
 }
 
+//edit user details function
+export const editUserDetails = (userDetails) => (dispatch) => {
+    dispatch({ type: LOADING_USER });
+    axios.post('/user', userDetails)
+    .then(() => {
+        dispatch(getUserData());
+    })
+    .catch((err) => console.log(err));
+}
+
 const setAuthorizationHeader = (token) => {
     //store bearer token locally and get user data
     const FBIdToken = `Bearer ${token}`;
-    localStorage.setItem('FBIdToken', `Bearer ${FBIdToken}`);
+    localStorage.setItem('FBIdToken', FBIdToken);
     axios.defaults.headers.common['Authorization'] = FBIdToken;
 }
