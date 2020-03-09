@@ -115,6 +115,17 @@ class signup extends Component {
                             value={this.state.email}
                             onChange={this.handleChange}
                             fullWidth/>
+                        <TextField id="handle"
+                            name="handle"
+                            type="text"
+                            label="Username"
+                            className={classes.textField}
+                            //display null password error
+                            helperText={errors.handle}
+                            error={errors.handle ? true : false}
+                            value={this.state.handle}
+                            onChange={this.handleChange}
+                            fullWidth/>
                         <TextField id="password"
                             name="password"
                             type="password"
@@ -135,17 +146,6 @@ class signup extends Component {
                             helperText={errors.confirmPassword}
                             error={errors.confirmPassword ? true : false}
                             value={this.state.confirmPassword}
-                            onChange={this.handleChange}
-                            fullWidth/>
-                        <TextField id="handle"
-                            name="handle"
-                            type="text"
-                            label="Handle"
-                            className={classes.textField}
-                            //display null password error
-                            helperText={errors.handle}
-                            error={errors.handle ? true : false}
-                            value={this.state.handle}
                             onChange={this.handleChange}
                             fullWidth/>
                         {errors.general && (
