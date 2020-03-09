@@ -73,21 +73,21 @@ class signup extends Component {
         }
         //process signup
         axios.post('/signup',newUserData)
-            .then((result) => {
-                console.log(result.data);
-                localStorage.setItem('FBIdToken', `Bearer ${result.data.token}`);
-                this.setState({
-                    loading: false
-                });
-                //actual redirection
-                this.props.history.push('/');
-            })
-            .catch((err) => {
-                this.setState({
-                    errors: err.response.data,
-                    loading: false
-                });
+        .then((result) => {
+            console.log(result.data);
+            localStorage.setItem('FBIdToken', `Bearer ${result.data.token}`);
+            this.setState({
+                loading: false
             });
+            //actual redirection
+            this.props.history.push('/');
+        })
+        .catch((err) => {
+            this.setState({
+                errors: err.response.data,
+                loading: false
+            });
+        });
     }
     //targets form field and allows change of target value
     handleChange = (event) => {

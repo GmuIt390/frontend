@@ -12,15 +12,15 @@ class home extends Component {
     //get posts
     componentDidMount() {
         axios.get('/posts')
-            .then((result) => {
-                console.log(result.data);
-                this.setState({
-                    posts: result.data
-                })
+        .then((result) => {
+            console.log(result.data);
+            this.setState({
+                posts: result.data
             })
-            .catch((err) => {
-                console.log(err);
-            })
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     }
     render() {
         //checks if posts exist and loaded
