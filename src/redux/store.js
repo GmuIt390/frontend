@@ -9,6 +9,7 @@ import uiReducer from './reducers/uiReducer';
 //initialize
 const initialState = {};
 const middleware = [thunk];
+console.log(middleware);
 
 //combine reducer files
 const reducers = combineReducers({
@@ -17,14 +18,14 @@ const reducers = combineReducers({
     UI: uiReducer
 });
 
-//create store
+//create store: requires redux devtools!!
 const store = createStore(
     reducers,
     initialState,
-    // compose(
-    //     applyMiddleware(...middleware),
-    //     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    // )
+    compose(
+        applyMiddleware(...middleware),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
 );
 
 export default store;

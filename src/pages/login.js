@@ -12,6 +12,10 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+//redux components
+import { connect } from 'react-redux';
+import { loginUser } from '../redux/actions/userActions'; 
+
 //css
 const styles = {
     form: {
@@ -51,39 +55,25 @@ class login extends Component {
         this.state ={
             email: '',
             password: '',
-            loading: false, //loading after submit
             errors: {}
+        }
+    }
+    //get props for validation
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.UI.errors) {
+            this.setState({ errors: nextProps.UI.errors });
         }
     }
     //redirect after submit
     handleSubmit = (event) => {
         event.preventDefault();
-        //change load flag
-        this.setState({
-            loading: true
-        });
         //login fields for userData object
         const userData = {
             email: this.state.email,
             password: this.state.password
-        }
-        //process login
-        axios.post('/login',userData)
-        .then((result) => {
-            console.log(result.data);
-            localStorage.setItem('FBIdToken', `Bearer ${result.data.token}`);
-            this.setState({
-                loading: false
-            });
-            //actual redirection
-            this.props.history.push('/');
-        })
-        .catch((err) => {
-            this.setState({
-                errors: err.response.data,
-                loading: false
-            });
-        });
+        };
+        //redirect on success
+        this.props.loginUser(userData, this.props.history);
     }
     //targets form field and allows change of target value
     handleChange = (event) => {
@@ -93,9 +83,9 @@ class login extends Component {
     }
     render() {
         //bring prop styles
-        const { classes } = this.props;
+        const { classes,UI: { loading } } = this.props;
         //bring errors and load state
-        const { errors,loading} = this.state;
+        const { errors} = this.state;
         return (
             //create responsive division on page
             <Grid container className={classes.form}>
@@ -158,7 +148,21 @@ class login extends Component {
 
 //checks prop types for login
 login.propTypes = {
-        classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    loginUser: PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired,
+    UI: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(login);
+//map login state to global props
+const mapStateToProps = (state) => ({
+    user: state.user,
+    UI: state.UI
+});
+
+//actions used
+const mapActionsToProps = {
+    loginUser
+}
+
+export default connect(mapStateToProps,mapActionsToProps)(withStyles(styles)(login));
