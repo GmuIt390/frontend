@@ -1,4 +1,4 @@
-import { SET_USER,SET_ERRORS,LOADING_UI,CLEAR_ERRORS } from '../types';
+import { SET_USER,SET_ERRORS,LOADING_UI,CLEAR_ERRORS, SET_UNAUTHENTICATED } from '../types';
 import axios from 'axios';
 
 //login function
@@ -7,11 +7,7 @@ export const loginUser = (userData,history) => (dispatch) => {
     //process login
     axios.post('/login',userData)
     .then((result) => {
-        console.log(result.data);
-        //store bearer token locally and get user data
-        const FBIdToken = `Bearer ${result.data.token}`;
-        localStorage.setItem('FBIdToken', `Bearer ${result.data.token}`);
-        axios.defaults.headers.common['Authorization'] = FBIdToken;
+        setAuthorizationHeader(result.data.token);
         dispatch(getUserData());
         //clear error from form
         dispatch({ type: CLEAR_ERRORS});
@@ -26,6 +22,13 @@ export const loginUser = (userData,history) => (dispatch) => {
     });
 }
 
+//logout function
+export const logoutUser = () => (dispatch) => {
+    localStorage.removeItem('FBIdToken');
+    delete axios.defaults.headers.common['Authorization'];
+    dispatch({ type: SET_UNAUTHENTICATED });
+}
+
 //get user data function when logged in
 export const getUserData = () => (dispatch) => {
     axios.get('/user')
@@ -36,4 +39,33 @@ export const getUserData = () => (dispatch) => {
         })
     })
     .catch((err) => console.log(err));
+}
+
+//signup function
+export const signupUser = (newUserData,history) => (dispatch) => {
+    dispatch({ type: LOADING_UI });
+    //process signup
+    axios.post('/signup',newUserData)
+    .then((result) => {
+        //authorize token help function
+        setAuthorizationHeader(result.data.token);
+        dispatch(getUserData());
+        //clear error from form
+        dispatch({ type: CLEAR_ERRORS});
+        //actual redirection
+        history.push('/');
+    })
+    .catch((err) => {
+        dispatch({
+            type: SET_ERRORS,
+            payload: err.response.data
+        })
+    });
+}
+
+const setAuthorizationHeader = (token) => {
+    //store bearer token locally and get user data
+    const FBIdToken = `Bearer ${token}`;
+    localStorage.setItem('FBIdToken', `Bearer ${FBIdToken}`);
+    axios.defaults.headers.common['Authorization'] = FBIdToken;
 }
