@@ -11,6 +11,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+//redux components
+import { connect } from 'react-redux';
+import { likePost,unlikePost } from '../redux/actions/dataActions'; 
+
 const styles = {
     card: {
         display: 'flex',

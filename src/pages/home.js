@@ -2,34 +2,28 @@ import React, { Component } from 'react';
 //npm install --save axios
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
 //import components
 import Post from '../components/Post';
 import Profile from '../components/Profile';
 
+//redux components
+import { connect } from 'react-redux';
+import { getPosts } from '../redux/actions/dataActions'; 
+
 //home page rendering
 class home extends Component {
-    state = {
-        posts: null
-    }
     //get posts
     componentDidMount() {
-        axios.get('/posts')
-        .then((result) => {
-            console.log(result.data);
-            this.setState({
-                posts: result.data
-            })
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+        this.props.getPosts();
     }
     render() {
+        const{ posts,loading } = this.props.data;
         //checks if posts exist and loaded
-        let recentPostMarkup = this.state.posts ? (
+        let recentPostMarkup = !loading ? (
             //renders all post from Post component
-            this.state.posts.map((post) => <Post key={post.postId} post={post}/>)
+            posts.map((post) => <Post key={post.postId} post={post}/>)
         ) : <p>Loading...</p>
         return (
             //Create grid structure for posts
@@ -47,4 +41,20 @@ class home extends Component {
     }
 }
 
-export default home;
+//checks prop types for posts
+home.propTypes = {
+    getPosts: PropTypes.func.isRequired,
+    data: PropTypes.object.isRequired
+}
+
+//map post state to global props
+const mapStateToProps = (state) => ({
+    data: state.data
+});
+
+//actions used
+const mapActionsToProps = {
+    getPosts
+}
+
+export default connect(mapStateToProps,mapActionsToProps)(home);
