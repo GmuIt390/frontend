@@ -30,6 +30,8 @@ import signup from './pages/signup';
 
 const theme = createMuiTheme(themeFile);
 
+axios.defaults.baseURL = "https://us-central1-prod-exercise.cloudfunctions.net/api";
+
 //checks login status
 const token = localStorage.FBIdToken;
 if(token) {
