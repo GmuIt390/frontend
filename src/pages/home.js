@@ -7,6 +7,8 @@ import PropTypes from 'prop-types';
 //import components
 import Post from '../components/Post';
 import Profile from '../components/Profile';
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
+import IndexHeader from "../components/Headers/IndexHeader.js";
 
 //redux components
 import { connect } from 'react-redux';
@@ -27,16 +29,20 @@ class home extends Component {
         ) : <p>Loading...</p>
         return (
             //Create grid structure for posts
-            <div>
-                <Grid container spacing={10}>
-                    <Grid item sm={8} xs={12}>
-                        {recentPostMarkup}
+            <>
+                {/* <IndexNavbar/> */}
+                <IndexHeader/>
+                <div className="container">
+                    <Grid container spacing={10}>
+                        <Grid item sm={8} xs={12}>
+                            {recentPostMarkup}
+                        </Grid>
+                        <Grid item sm={4} xs={12}>
+                            <Profile/>
+                        </Grid>
                     </Grid>
-                    <Grid item sm={4} xs={12}>
-                        <Profile/>
-                    </Grid>
-                </Grid>
-            </div>
+                </div>
+            </>
         );
     }
 }

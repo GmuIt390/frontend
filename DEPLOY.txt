@@ -3,7 +3,7 @@ npm run build
 firebase init
 ->y->hosting->exisiting->prod
 build
-->y->y
+->n->n
 firebase deploy
 
 CHANGES

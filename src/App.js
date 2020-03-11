@@ -28,6 +28,11 @@ import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
 
+//npm install --save node-sass
+// styles
+import "./assets/css/bootstrap.min.css";
+import "./assets/scss/paper-kit.scss";
+
 const theme = createMuiTheme(themeFile);
 
 axios.defaults.baseURL = "https://us-central1-prod-exercise.cloudfunctions.net/api";
@@ -58,8 +63,11 @@ class App extends Component {
                 <MuiThemeProvider theme={theme}>
                         <Router>
                             <Navbar/>
-                            {/*nav bar has its own container and each route is a page path*/}
-                            <div className="container">
+
+                            {/*Use div for condense page*/}
+                            {/* <div className="container"> */}
+
+                                {/*each route is a page path*/}
                                 <Switch>
                                     <Route
                                         exact path = "/"
@@ -74,7 +82,7 @@ class App extends Component {
                                         component = { signup }
                                     />
                                 </Switch>
-                            </div>
+                            {/* </div> */}
                         </Router>
                 </MuiThemeProvider>
             </Provider>
