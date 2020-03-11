@@ -21,7 +21,7 @@ export const getPosts = () => (dispatch) => {
 
 //like a post
 export const likePost = (postId) => (dispatch) => {
-    axios.get(`'/posts/${postId}/like`)
+    axios.get(`/post/${postId}/like`)
     .then((result) => {
         dispatch({
             type: LIKE_POST,
@@ -33,7 +33,7 @@ export const likePost = (postId) => (dispatch) => {
 
 //unlike a post
 export const unlikePost = (postId) => (dispatch) => {
-    axios.get(`'/posts/${postId}/unlike`)
+    axios.get(`/post/${postId}/unlike`)
     .then((result) => {
         dispatch({
             type: UNLIKE_POST,
