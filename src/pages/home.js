@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 //import components
 import Post from '../components/Post';
 import Profile from '../components/Profile';
-import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 import IndexHeader from "../components/Headers/IndexHeader.js";
 
 //redux components
@@ -30,7 +29,6 @@ class home extends Component {
         return (
             //Create grid structure for posts
             <>
-                {/* <IndexNavbar/> */}
                 <IndexHeader/>
                 <div className="container">
                     <Grid container spacing={10}>
