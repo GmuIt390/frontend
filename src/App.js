@@ -30,8 +30,8 @@ import signup from './pages/signup';
 
 //npm install --save node-sass
 // styles
-import "./assets/css/bootstrap.min.css";
-import "./assets/scss/paper-kit.scss";
+// import "./assets/css/bootstrap.min.css";
+// import "./assets/scss/paper-kit.scss";
 
 const theme = createMuiTheme(themeFile);
 
@@ -62,7 +62,7 @@ class App extends Component {
                 {/*uses palette to apply to page*/}
                 <MuiThemeProvider theme={theme}>
                         <Router>
-                            <Navbar/>
+                            {/* <Navbar/> */}
 
                             {/*Use div for condense page*/}
                             {/* <div className="container"> */}
