@@ -27,6 +27,7 @@ import AuthRoute from './util/AuthRoute';
 import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
+import profile from './pages/profile';
 
 //npm install --save node-sass
 // styles
@@ -80,6 +81,10 @@ class App extends Component {
                                     <AuthRoute
                                         exact path = "/signup"
                                         component = { signup }
+                                    />
+                                    <Route
+                                        exact path = "/profile"
+                                        component = { profile }
                                     />
                                 </Switch>
                             {/* </div> */}

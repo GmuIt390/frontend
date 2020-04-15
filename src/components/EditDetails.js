@@ -37,8 +37,7 @@ const styles = (theme) => ({
         margin: '10px auto 10px auto'
     },
     button: {
-        position: 'relative',
-        float: 'right'
+        position: 'relative'
     },
     progress: {
         position: 'absolute'

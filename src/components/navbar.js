@@ -61,7 +61,7 @@ class navbar extends Component {
                                     <Button
                                         color="inherit" 
                                         component={Link} 
-                                        to='/{}'
+                                        to="/profile"
                                     >
                                         Profile
                                     </Button>
