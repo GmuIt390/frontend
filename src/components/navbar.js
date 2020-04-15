@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MyButton from '../util/myButton';
 
+//redux
+import { logoutUser } from '../redux/actions/userActions';
+
 //material UI navigation
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -157,6 +160,10 @@ import {
 //   }
 
 class navbar extends Component {
+    //logout method
+    handleLogout = () => {
+        this.props.logoutUser();
+    }
     render() {
         const { authenticated } = this.props
         return (
@@ -211,6 +218,20 @@ class navbar extends Component {
                                     <MyButton tip="Notifications">
                                         <Notifications/>
                                     </MyButton>
+                                    <Button
+                                        color="inherit" 
+                                        component={Link} 
+                                        to='/{}'
+                                    >
+                                        Profile
+                                    </Button>
+                                    <Button
+                                        color="inherit"
+                                        component={Link}
+                                        onClick={this.handleLogout}
+                                    >
+                                        Logout
+                                    </Button>
                                 </>
                             )
                             : (
@@ -238,7 +259,20 @@ navbar.propTypes = {
 
 //map auth state to global props
 const mapStateToProps = (state) => ({
-    authenticated: state.user.authenticated
+    authenticated: state.user.authenticated,
+    user: state.user
 });
 
-export default connect(mapStateToProps)(navbar);
+//actions used
+const mapActionsToProps = {
+    logoutUser
+};
+
+//checks prop types for user
+navbar.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
+};
+
+export default connect(mapStateToProps,mapActionsToProps)(navbar);
