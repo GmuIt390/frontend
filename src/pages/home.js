@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 //import components
 import Post from '../components/Post';
 import Profile from '../components/Profile';
-import IndexHeader from "../components/Headers/IndexHeader.js";
 import Navbar from '../components/navbar';
 
 //redux components
@@ -41,14 +40,6 @@ class home extends Component {
                         <Navbar/>
                     </div>
                 </div>
-                {/* <IndexHeader/> */}
-                {/* <div
-                    className="page-header section-dark"
-                    style={{
-                    backgroundImage:
-                        "url(" + require("../assets/img/antoine-barres.jpg") + ")"
-                    }}
-                ></div> */}
                 <div className="container">
                     <div id="banner"></div>
                     <br/><br/>
@@ -79,15 +70,15 @@ class home extends Component {
                             <h3>Search</h3>
                         </Grid>
                     </Grid>
-                    <br/><hr/><br/>
-                    <Grid container spacing={10}>
-                        <Grid item sm={8} xs={12}>
-                            {recentPostMarkup}
-                        </Grid>
-                        <Grid item sm={4} xs={12}>
-                            <Profile/>
-                        </Grid>
+                    <br/><hr/>
+                    <h1 class="center">Blog Posting</h1>
+                    <br/><br/>
+                    <div>
+                    <Grid container spacing={20}>
+                        {recentPostMarkup}
                     </Grid>
+                    </div>
+                    <br/><br/>
                 </div>
                 <div id="footer">
                 <p><a href="index.html">Home</a> | <a href="About-us.html">About Us</a> | <a href="Contact-us.html">Contact Us</a> | <a href="News.html">News</a></p>

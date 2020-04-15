@@ -25,7 +25,8 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 const styles = {
     card: {
         display: 'flex',
-        marginBottom: 20
+        margin: 'auto',
+        marginBottom: 50
     },
     image: {
         minWidth: 200
