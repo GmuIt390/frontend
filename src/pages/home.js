@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 //npm install --save axios
-import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
 //import components
 import Post from '../components/Post';
-import Profile from '../components/Profile';
 import Navbar from '../components/navbar';
 
 //redux components
@@ -43,33 +41,13 @@ class home extends Component {
                 <div className="container">
                     <div id="banner"></div>
                     <br/><br/>
-                    <Grid container spacing={10}>
-                        <Grid item sm={8} xs={12}>
-                            <h1>Welcome to GymWorld</h1>
-                            <p>WHAT WE OFFER!<br/>
-                            
-                            1. Variety of Exercises ranging from Upper body to lower body. <br/>
-                            2. A range of intensitites that you can follow around for your comfort level!<br/>
-                            3. Execise that can be done at the gym, home or altered for yourself.<br/>
-                            </p>
-                        </Grid>
-                        <Grid item sm={4} xs={12}>
-                            <div class="sidebar_item">
-                                <h3>Blog</h3>
-                                <h4>Main Content</h4>
-                                <h5>Content</h5>
-                                <p>More Content<br /><a href="#">Read more</a></p>
-                            </div>
-                            <h3>Useful Links</h3>
-                            <ul>
-                            <li><a href="#">link 1</a></li>
-                            <li><a href="#">link 2</a></li>
-                            <li><a href="#">link 3</a></li>
-                            <li><a href="#">link 4</a></li>
-                            </ul>
-                            <h3>Search</h3>
-                        </Grid>
-                    </Grid>
+                    <h1 class="center">Welcome to GymWorld</h1>
+                    <p class="center">WHAT WE OFFER!<br/>
+                    
+                        1. Variety of Exercises ranging from Upper body to lower body. <br/>
+                        2. A range of intensitites that you can follow around for your comfort level!<br/>
+                        3. Execise that can be done at the gym, home or altered for yourself.<br/>
+                    </p>
                     <br/><hr/>
                     <h1 class="center">Blog Posting</h1>
                     <br/><br/>

@@ -8,28 +8,15 @@ import MyButton from '../util/myButton';
 import { logoutUser } from '../redux/actions/userActions';
 
 //material UI navigation
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 //npm install --save @material-ui/icons
 //icons
 import AddIcon from '@material-ui/icons/Add';
-import HomeIcon from '@material-ui/icons/Home';
 import Notifications from '@material-ui/icons/Notifications';
-
-// nodejs library that concatenates strings
-import classnames from "classnames";
-// reactstrap components
-import {
-    Collapse,
-    NavbarBrand,
-    Navbar,
-    NavItem,
-    NavLink,
-    Nav,
-    Container
-  } from "reactstrap";
 
 class navbar extends Component {
     //logout method
@@ -37,7 +24,7 @@ class navbar extends Component {
         this.props.logoutUser();
     }
     render() {
-        const { authenticated } = this.props
+        const { authenticated } = this.props;
         return (
                 <Toolbar className="nav-container">
                     <Fragment>
@@ -47,8 +34,14 @@ class navbar extends Component {
                         <Button color="inherit" component={Link} to="/">
                             Intensity
                         </Button>
-                        <Button color="inherit" component={Link} to="/">
-                            About
+                        <Button color="inherit" component={Link} to="/news">
+                            News
+                        </Button>
+                        <Button color="inherit" component={Link} to="/about">
+                            About Us
+                        </Button>
+                        <Button color="inherit" component={Link} to="/contact">
+                            Contact Us
                         </Button>
                         {authenticated ? (
                                 <>

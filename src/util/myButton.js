@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React from 'react';
 
 //material ui components
 import ToolTip from '@material-ui/core/ToolTip';

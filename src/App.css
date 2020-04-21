@@ -133,6 +133,27 @@ ol li
   margin: auto;
   border: 10px solid #DDD;}
 
+#graphic1
+  {  background: transparent url(assets/img/graphic1.jpg) no-repeat;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    height: 500px;}
+
+#graphic2
+{  background: transparent url(assets/img/graphic2.jpg) no-repeat;
+  position: relative;
+  margin: auto;
+  width: 50%;
+  height: 500px;}
+
+#graphic3
+{  background: transparent url(assets/img/graphic3.jpg) no-repeat;
+  position: relative;
+  margin: auto;
+  width: 50%;
+  height: 500px;}
+
 #logo
 { width: 880px;
   position: relative;

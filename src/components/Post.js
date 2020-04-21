@@ -67,7 +67,7 @@ class Post extends Component {
                 createdAt,
                 userImage,
                 userHandle,
-                postId,
+                // postId,
                 likeCount,
                 commentCount
             },

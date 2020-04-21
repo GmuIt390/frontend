@@ -4,8 +4,6 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import MyButton from '../util/myButton';
 
 //material ui components
-import ToolTip from '@material-ui/core/ToolTip';
-import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';

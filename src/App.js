@@ -20,14 +20,19 @@ import { SET_AUTHENTICATED } from './redux/types';
 import { logoutUser, getUserData } from './redux/actions/userActions';
 
 //components
-import Navbar from './components/navbar';
 import AuthRoute from './util/AuthRoute';
 
 //pages
 import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
+import low from './pages/low';
+import medium from './pages/medium';
+import high from './pages/high';
 import profile from './pages/profile';
+import about from './pages/about';
+import news from './pages/news';
+import contact from './pages/contact';
 
 //npm install --save node-sass
 // styles
@@ -85,6 +90,30 @@ class App extends Component {
                                     <Route
                                         exact path = "/profile"
                                         component = { profile }
+                                    />
+                                    <Route
+                                        exact path = "/low"
+                                        component = { low }
+                                    />
+                                    <Route
+                                        exact path = "/medium"
+                                        component = { medium }
+                                    />
+                                    <Route
+                                        exact path = "/high"
+                                        component = { high }
+                                    />
+                                    <Route
+                                        exact path = "/news"
+                                        component = { news }
+                                    />
+                                    <Route
+                                        exact path = "/about"
+                                        component = { about }
+                                    />
+                                    <Route
+                                        exact path = "/contact"
+                                        component = { contact }
                                     />
                                 </Switch>
                             {/* </div> */}
