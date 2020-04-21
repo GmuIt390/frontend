@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MyButton from '../util/myButton';
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
 
 //redux
 import { logoutUser } from '../redux/actions/userActions';
@@ -10,8 +12,6 @@ import { logoutUser } from '../redux/actions/userActions';
 //material UI navigation
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 
 //npm install --save @material-ui/icons
 //icons
@@ -31,9 +31,22 @@ class navbar extends Component {
                         <Button color="inherit" component={Link} to="/">
                             Home
                         </Button>
-                        <Button color="inherit" component={Link} to="/">
-                            Intensity
-                        </Button>
+                        <div class="dropdown">
+                            <button class="dropbtn">INTENSITY
+                            <i class="fa fa-caret-down"></i>
+                            </button>
+                                <div class="dropdown-content">
+                                <Button color="inherit" component={Link} to="/low">
+                                    Low Intensity
+                                </Button>
+                                <Button color="inherit" component={Link} to="/medium">
+                                    Medium Intensity
+                                </Button>
+                                <Button color="inherit" component={Link} to="/high">
+                                    High Intensity
+                                </Button>
+                            </div>
+                        </div>
                         <Button color="inherit" component={Link} to="/news">
                             News
                         </Button>

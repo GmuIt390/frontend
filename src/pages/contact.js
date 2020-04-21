@@ -54,7 +54,7 @@ class contact extends Component {
                 <div id="header">
                     <div id="logo">
                         <div id="logo_text">
-                        <h1><a href="index.html">GYM World</a></h1>
+                        <h1><a href="/">GYM World</a></h1>
                         <h2>Fitness|Health|Exercise</h2>
                         </div>
                     </div>
