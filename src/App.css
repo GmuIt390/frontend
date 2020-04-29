@@ -131,7 +131,8 @@ ol li
   width: 800px;
   height: 275px;
   margin: auto;
-  border: 10px solid #DDD;}
+  border: 10px solid #DDD;
+}
 
 #graphic1
   {  background: transparent url(assets/img/graphic1.jpg) no-repeat;

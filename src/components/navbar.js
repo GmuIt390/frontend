@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MyButton from '../util/myButton';
-import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownButton from 'react-bootstrap/DropdownButton'
 
 //redux
 import { logoutUser } from '../redux/actions/userActions';
@@ -12,6 +10,7 @@ import { logoutUser } from '../redux/actions/userActions';
 //material UI navigation
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import AppBar from '@material-ui/core/AppBar';
 
 //npm install --save @material-ui/icons
 //icons
@@ -26,6 +25,9 @@ class navbar extends Component {
     render() {
         const { authenticated } = this.props;
         return (
+        <>
+            <br/><br/><br/>
+            <AppBar>
                 <Toolbar className="nav-container">
                     <Fragment>
                         <Button color="inherit" component={Link} to="/">
@@ -93,7 +95,8 @@ class navbar extends Component {
                         }
                     </Fragment>
                 </Toolbar>
-            // </AppBar>
+            </AppBar>
+        </>
         );
     }
 }

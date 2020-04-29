@@ -28,14 +28,14 @@ class home extends Component {
             //Create grid structure for posts
             <>
                 <div id="header">
+                    <div class="navbar">
+                        <Navbar/>
+                    </div>
                     <div id="logo">
                         <div id="logo_text">
                         <h1><a href="/">GYM World</a></h1>
                         <h2>Fitness|Health|Exercise</h2>
                         </div>
-                    </div>
-                    <div class="navbar">
-                        <Navbar/>
                     </div>
                 </div>
                 <div className="container">
@@ -48,6 +48,17 @@ class home extends Component {
                         2. A range of intensitites that you can follow around for your comfort level!<br/>
                         3. Execise that can be done at the gym, home or altered for yourself.<br/>
                     </p>
+                    <br/><hr/>
+                    <h1 class="center">Try Calculating Your BMI!</h1>
+                    <div className="container">
+                        <iframe class="center" src="https://bmicalculatorusa.com/widgets/widget.php?t=720x300"
+                            width="720"
+                            height="300">
+                        </iframe>
+                        <p class="center">
+                            Supplied by <a href="https://bmicalculatorusa.com">BMI Calculator USA</a>
+                        </p>
+                    </div>
                     <br/><hr/>
                     <h1 class="center">Blog Posting</h1>
                     <br/><br/>

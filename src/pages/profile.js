@@ -158,14 +158,14 @@ class profile extends Component {
         return (
             <>
                 <div id="header">
+                    <div class="navbar">
+                        <Navbar/>
+                    </div>
                     <div id="logo">
                         <div id="logo_text">
                         <h1><a href="/">GYM World</a></h1>
                         <h2>Fitness|Health|Exercise</h2>
                         </div>
-                    </div>
-                    <div class="navbar">
-                        <Navbar/>
                     </div>
                 </div>
                 <br/><br/>
