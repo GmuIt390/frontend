@@ -1,14 +1,12 @@
-import React, { Component,Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
-import MyButton from '../util/myButton';
 
 //material ui components
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 //redux
@@ -95,7 +93,7 @@ class Posting extends Component{
                                 rows="4"
                                 placeholder="Hello there"
                                 error={errors.body ? true : false}
-                                helpText={errors.body}
+                                helperText={errors.body}
                                 className={classes.textField}
                                 onChange={this.handleChange}
                                 fullWidth

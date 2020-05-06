@@ -121,7 +121,7 @@ ol li
   margin-right: auto;}
 
 #header
-{ background: #323534 url(/assets/img/back.png) repeat-x;
+{ background: #323534 /*url(/assets/img/back.png)*/ repeat-x;
   height: 177px;
   
   }
@@ -241,7 +241,7 @@ ul#menu li a:hover
 { float: right;
   width: 224px;}
 
-.sidebar_top
+/* .sidebar_top
 { width: 222px;
   height: 14px;
   background: transparent url(/assets/img/side_top.png) no-repeat;}
@@ -260,7 +260,7 @@ ul#menu li a:hover
 .sidebar_item
 { background: url(/assets/img/side_back.png) repeat-y;
   padding: 0 15px;
-  width: 192px;}
+  width: 192px;} */
 
 .sidebar li a.selected
 { color: #444;} 
@@ -292,7 +292,7 @@ ul#menu li a:hover
   height: 80px;
   padding: 28px 0 5px 0;
   text-align: center; 
-  background: #3B3939 url(/assets/img/footer.png) repeat-x;
+  background: #3B3939 /*url(/assets/img/footer.png)*/ repeat-x;
   color: #A8AA94;
   }
 

@@ -6,6 +6,7 @@ import dayjs from 'dayjs';
 import relatativeTime from 'dayjs/plugin/relativeTime';
 import PropTypes from 'prop-types';
 import MyButton from '../util/myButton';
+import DeletePost from './DeletePost';
 
 //material ui card components
 import Card from '@material-ui/core/Card';
@@ -24,6 +25,7 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 
 const styles = {
     card: {
+        position: 'relative',
         display: 'flex',
         margin: 'auto',
         marginBottom: 50,
@@ -68,12 +70,13 @@ class Post extends Component {
                 createdAt,
                 userImage,
                 userHandle,
-                // postId,
+                postId,
                 likeCount,
                 commentCount
             },
             user: {
-                authenticated
+                authenticated,
+                credentials: { handle }
             }
          } = this.props;
         //check for auth to use button
@@ -98,6 +101,9 @@ class Post extends Component {
                 </MyButton>
             )
         )
+        const deleteButton = authenticated && userHandle === handle ? (
+            <DeletePost postId={postId}/>
+        ) : null;
         return (
             //card rendering
             <Card className={classes.card}>
@@ -113,6 +119,7 @@ class Post extends Component {
                         color="primary">
                         {userHandle}
                     </Typography>
+                    {deleteButton}
                     {/*createdAt no nanoseconds?*/}
                     <Typography
                         variant="body2"
