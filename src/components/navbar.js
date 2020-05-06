@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MyButton from '../util/myButton';
+import Posting from './Posting'
 
 //redux
 import { logoutUser } from '../redux/actions/userActions';
@@ -14,8 +15,6 @@ import AppBar from '@material-ui/core/AppBar';
 
 //npm install --save @material-ui/icons
 //icons
-import AddIcon from '@material-ui/icons/Add';
-import Notifications from '@material-ui/icons/Notifications';
 
 class navbar extends Component {
     //logout method
@@ -33,11 +32,11 @@ class navbar extends Component {
                         <Button color="inherit" component={Link} to="/">
                             Home
                         </Button>
-                        <div class="dropdown">
-                            <button class="dropbtn">INTENSITY
-                            <i class="fa fa-caret-down"></i>
+                        <div className="dropdown">
+                            <button className="dropbtn">INTENSITY
+                            <i className="fa fa-caret-down"></i>
                             </button>
-                                <div class="dropdown-content">
+                                <div className="dropdown-content">
                                 <Button color="inherit" component={Link} to="/low">
                                     Low Intensity
                                 </Button>
@@ -60,12 +59,7 @@ class navbar extends Component {
                         </Button>
                         {authenticated ? (
                                 <>
-                                    <MyButton tip="Post">
-                                        <AddIcon/>
-                                    </MyButton>
-                                    <MyButton tip="Notifications">
-                                        <Notifications/>
-                                    </MyButton>
+                                    <Posting/>
                                     <Button
                                         color="inherit" 
                                         component={Link} 
@@ -121,7 +115,7 @@ const mapActionsToProps = {
 navbar.propTypes = {
     logoutUser: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
-    classes: PropTypes.object.isRequired
+    // classes: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps,mapActionsToProps)(navbar);

@@ -1,4 +1,4 @@
-import { SET_POSTS,LOADING_DATA,LIKE_POST,UNLIKE_POST } from '../types';
+import { SET_POSTS,LOADING_DATA,LIKE_POST,UNLIKE_POST,POSTING } from '../types';
 
 const initialState = {
     posts: [],
@@ -28,6 +28,14 @@ export default function(state = initialState,action) {
             state.posts[index] = action.payload;
             return {
                 ...state
+            }
+        case POSTING:
+            return {
+                ...state,
+                posts: [
+                    action.payload,
+                    ...state.posts
+                ]
             }
         default:
             return state;
