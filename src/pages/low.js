@@ -86,10 +86,10 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                             <ol>
-                                <li> 10 Chest Fly   </li>
-                                <li> 12 Alternating Curtsy Lunge plus Arm Circles   </li>
-                                <li> 5 Reverse Fly </li>
-                                <li> 2	Alternating Side Lunge to Overhead Reach   </li>
+                                <li> 10 Chest fly </li>
+                                <li> 12 Alternating curtsy lunge plus arm circles </li>
+                                <li> 5 Reverse fly </li>
+                                <li> 2 Alternating side lunge to overhead reach   </li>
                                 <li> 1 Laterial Raise </li>
                             </ol>
                         </Typography>
@@ -106,11 +106,11 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> 5 Ski Squat &amp; Push Pull to Knee &amp; Pull Down </li>
-                            <li>  10 Bicep Curl </li>
-                            <li> 2 Sumo Squat to Alternating Side Leg Raise </li>
-                            <li> 5 Tricep Kickback </li>
-                            <li> Front Jack </li>
+                            <li> 5 Ski squat &amp; push pull to knee &amp; pull down </li>
+                            <li> 10 Bicep curl </li>
+                            <li> 2 Sumo squat to alternating side leg raise </li>
+                            <li> 5 Tricep kickback </li>
+                            <li> Front jack </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -126,11 +126,11 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li>  10 Bidges with chest press </li>
-                            <li> 2 Steop Up with Reverse Lunge </li>
-                            <li> 5 Plank Jacks </li>
-                            <li> Dumbbell Deadlift </li>
-                            <li> 3min Mock Jumping Rope(With low jump) </li>
+                            <li> 10 Bidges with chest press </li>
+                            <li> 2 Step up with reverse lunge </li>
+                            <li> 5 Plank jacks </li>
+                            <li> Dumbbell deadlift </li>
+                            <li> 3min Mock jumping rope (with low jump) </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -147,10 +147,10 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                             <ol>
-                                <li> Bandede Later Walk </li>
-                                <li> Kettlebell Swing </li>
-                                <li> Dumbbrll Deadlift </li>
-                                <li> Hip Openers </li>
+                                <li> Banded lateral walk </li>
+                                <li> Kettlebell swing </li>
+                                <li> Dumbbell deadlift </li>
+                                <li> Hip openers </li>
                             </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -166,10 +166,10 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Single-Leg Deadlift </li>
-                            <li> Glute Bridge </li>
-                            <li> Monster Walk </li>
-                            <li> Donkey Kick </li>
+                            <li> Single-leg deadlift </li>
+                            <li> Glute bridge </li>
+                            <li> Monster walk </li>
+                            <li> Donkey kick </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -185,11 +185,11 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Stability Ball Hamstring Curls </li>
-                            <li> Reverse Lunge </li>
-                            <li> Kettlebell Swing </li>
-                            <li> Sliding Hamstring Curl </li>
-                            <li> Lateral Lunge </li>
+                            <li> Stability ball hamstring curls </li>
+                            <li> Reverse lunge </li>
+                            <li> Kettlebell swing </li>
+                            <li> Sliding hamstring curl </li>
+                            <li> Lateral lunge </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -206,10 +206,10 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                             <ol>
-                                <li> Stability Ball Cruches </li>
-                                <li> Long-Leg Crunch </li>
-                                <li> Side Plan </li>
-                                <li> Balancing Planks </li>
+                                <li> Stability ball crunches </li>
+                                <li> Long-leg crunch </li>
+                                <li> Side plank </li>
+                                <li> Balancing planks </li>
                             </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -226,8 +226,8 @@ class low extends Component {
                         <Typography>
                         <ol>
                             <li> Twists </li>
-                            <li> Medicine Ball Twist </li>
-                            <li> Bicylce Cruches </li>
+                            <li> Medicine ball twist </li>
+                            <li> Bicycle crunches </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -243,7 +243,7 @@ class low extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Opposite Arm and Leg Extentions </li>
+                            <li> Opposite arm and leg extentions </li>
                             <li> Planks </li>
                             <li> Side planks with twist </li>
                             <li> Exercise ball passes </li>

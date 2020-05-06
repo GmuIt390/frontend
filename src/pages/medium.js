@@ -86,10 +86,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                             <ol>
-                                <li> Bench Press  </li>
-                                <li> Chest Dip </li>
-                                <li>  Push-ups</li>
-                                <li> Machine Press </li>
+                                <li> Bench press </li>
+                                <li> Chest dip </li>
+                                <li> Push-ups </li>
+                                <li> Machine press </li>
                             </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -105,10 +105,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li>Upright Row  </li>
-                            <li> Shoulder Press </li>
-                            <li>Arnold Press  </li>
-                            <li> Front Cable Raise </li>
+                            <li> Upright row </li>
+                            <li> Shoulder press </li>
+                            <li> Arnold press </li>
+                            <li> Front cable raise </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -124,9 +124,9 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Back Extention </li>
-                            <li>Bent Over Row  </li>
-                            <li>Seated Row  </li>
+                            <li> Back extention </li>
+                            <li> Bent over row  </li>
+                            <li> Seated row  </li>
                             <li> Deadlift </li>
                         </ol>
                         </Typography>
@@ -144,10 +144,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                             <ol>
-                                <li> Box Jump </li>
-                                <li> Box Squat </li>
-                                <li>Bulgarian Split Squat  </li>
-                                <li> Cable Pull </li>
+                                <li> Box jump </li>
+                                <li> Box squat </li>
+                                <li> Bulgarian split squat </li>
+                                <li> Cable pull </li>
                             </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -163,10 +163,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Calf Press </li>
-                            <li>Leg Press  </li>
-                            <li> Deadlift Band </li>
-                            <li> Deadlift Barbell </li>
+                            <li> Calf press </li>
+                            <li> Leg press </li>
+                            <li> Deadlift band </li>
+                            <li> Deadlift barbell </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -182,10 +182,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Front Squat </li>
-                            <li> Glute Ham Raise </li>
-                            <li>High Knee Skips  </li>
-                            <li>Jump Squat  </li>
+                            <li> Front squat </li>
+                            <li> Glute ham raise </li>
+                            <li> High knee skips </li>
+                            <li> Jump squat </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -202,10 +202,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                             <ol>
-                                <li>Bicyle Crunch   </li>
-                                <li> Ab Wheel </li>
-                                <li> Cable Crunch  </li>
-                                <li> Cable Twist  </li>
+                                <li> Bicycle crunch </li>
+                                <li> Ab wheel </li>
+                                <li> Cable crunch </li>
+                                <li> Cable twist </li>
                             </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -221,10 +221,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> Crunch Machine  </li>
-                            <li>  Cross Body Crunch</li>
-                            <li> Decline Crunch </li>
-                            <li> Crunch Ball </li>
+                            <li> Crunch machine  </li>
+                            <li> Cross body crunch</li>
+                            <li> Decline crunch </li>
+                            <li> Crunch ball </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -240,10 +240,10 @@ class medium extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li>Flat Knee Raise   </li>
-                            <li> Flat Leg Raise  </li>
-                            <li> Hanging Leg Raise  </li>
-                            <li>Hanging Leg Raise  </li>
+                            <li> Flat knee raise </li>
+                            <li> Flat leg raise </li>
+                            <li> Hanging leg raise </li>
+                            <li> Hanging leg raise </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>

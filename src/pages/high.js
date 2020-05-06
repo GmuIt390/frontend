@@ -106,8 +106,8 @@ class high extends Component {
                         <ExpansionPanelDetails>
                         <Typography>
                         <ol>
-                            <li> 3 Sets of alternating dumbell bicep curls with weight increase </li>
-                            <li> 3 Sets of Underhand lat pull-down  </li>
+                            <li> 3 Sets of alternating dumbbell bicep curls with weight increase </li>
+                            <li> 3 Sets of underhand lat pull-down  </li>
                             <li> 5 Cable biceps curl with last set being dropset </li>
                             <li> 5 Cable triceps press-down with last set being dropset </li>
                             <li> 3 Sets of triceps skull crushers </li>
@@ -130,8 +130,8 @@ class high extends Component {
                             <li> 3 Sets of bent-over rows </li>
                             <li> 4 Sets of lat pull-down </li>
                             <li> 3 Sets of shoulder overhead press </li>
-                            <li> 5 dumbbell lateral raise </li>
-                            <li> 5 bar upright rows </li>
+                            <li> 5 Dumbbell lateral raise </li>
+                            <li> 5 Bar upright rows </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -170,7 +170,7 @@ class high extends Component {
                             <li> 5 Sets of single-leg deadlift </li>
                             <li> 3 Sets of deadlift with weight increase </li>
                             <li> 5 Sets of leg Press </li>
-                            <li> 5 Sets of dumbell squats </li>
+                            <li> 5 Sets of dumbbell squats </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -211,7 +211,7 @@ class high extends Component {
                                 <li> 3 Sets of tuck and crunch </li>
                                 <li> 3 Sets of seated twist </li>
                                 <li> 3 Sets of bicycle crunches </li>
-                                <li> 3 Sets of 1 minute Plank </li>
+                                <li> 3 Sets of 1 minute plank </li>
                             </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -231,7 +231,7 @@ class high extends Component {
                             <li> 3 Sets of hanging knee raise twist </li>
                             <li> 3 Sets of hanging bicycles </li>
                             <li> 3 Sets of garhammer raise </li>
-                            <li> 3 Sets of 1 minute Plank </li>
+                            <li> 3 Sets of 1 minute plank </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
@@ -250,9 +250,9 @@ class high extends Component {
                             <li> 3 Sets of cable isometric hold </li>
                             <li> 3 Sets of cable oblique crunch </li>
                             <li> 3 Sets of overhead kneeling cable hold </li>
-                            <li> 3 sets of TRX pike </li>
-                            <li> 3 sets of lying side raise </li>
-                            <li> 3 Sets of 1 minute Plank </li>
+                            <li> 3 Sets of TRX pike </li>
+                            <li> 3 Sets of lying side raise </li>
+                            <li> 3 Sets of 1 minute plank </li>
                         </ol>
                         </Typography>
                         </ExpansionPanelDetails>
